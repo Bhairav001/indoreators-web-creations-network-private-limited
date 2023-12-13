@@ -1,6 +1,7 @@
 const express = require("express")
 const cors = require("cors");
 const { connection } = require("./config/db");
+const { postRouter } = require("./routes/Post.route");
 const app = express()
 require("dotenv").config()
 app.use(express.json());
@@ -10,7 +11,7 @@ app.use(cors());
 app.get("/",(req,res)=>{
     res.send("Home Page")
 })
-
+app.use("/notes",postRouter)
 app.listen(process.env.port,async()=>{
     try {
         await connection
