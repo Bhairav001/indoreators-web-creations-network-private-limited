@@ -1,0 +1,28 @@
+{
+    "users":[
+        {
+            "id":1,
+            "name":"Bhairav",
+            "age":34,
+            "married":false
+        },
+        {
+            "id":1,
+            "name":"omkar",
+            "age":32,
+            "married":true
+        },
+        {
+            "id":2,
+            "name":"Ramesh",
+            "age":34,
+            "married":false
+        },
+        {
+            "id":3,
+            "name":"Bhairav",
+            "age":34,
+            "married":false
+        }
+    ]
+}
