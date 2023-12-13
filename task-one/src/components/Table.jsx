@@ -7,7 +7,6 @@ const Table = () => {
   const [data, setData] = useState([
     { id: 1, name: 'John Doe', age: 25 },
     { id: 2, name: 'Jane Doe', age: 30 },
-    // Add more data as needed
   ]);
 const [users, setUsers] = useState([])
    const handleEdit = (rowIndex, columnName, value) => {
