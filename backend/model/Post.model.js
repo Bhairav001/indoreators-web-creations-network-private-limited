@@ -4,7 +4,7 @@ const postSchema = mongoose.Schema({
     title:String,
     post:String,
     category:String,
-    userID:String
+    // userID:String
 })
 
 const PostModel = mongoose.model("note",postSchema)

@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/",(req,res)=>{
-    res.send("Home Page")
+    res.send("Notes App")
 })
 app.use("/notes",postRouter)
 app.listen(process.env.port,async()=>{
