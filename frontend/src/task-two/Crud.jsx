@@ -28,7 +28,7 @@ const Crud = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const data = await axios.post('http://localhost:8080/notes/create', formData);
+    const data = await axios.post('http://localhost:8080/notes/create',formData);
     if (data.data.success) {
       setAddSection(false);
       alert(data.data.message);
@@ -49,7 +49,6 @@ const Crud = () => {
 
   const handleDelete = async (id) => {
     const data = await axios.delete(`http://localhost:8080/notes/delete/${id}`);
-
     if (data.data.success) {
       alert(data.data.message);
       getFetchData();
@@ -59,8 +58,8 @@ const Crud = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     const data = await axios.put('http://localhost:8080/notes/update', formDataEdit);
-    console.log('updatedData', data);
-    if (data.data.success) {
+    console.log('updatedData',data);
+    if (data.data.success){
       getFetchData();
       alert(data.data.message);
       setEditSection(false);
@@ -107,9 +106,9 @@ const Crud = () => {
           <table className="min-w-full">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Mobile</th>
+                <th>Title</th>
+                <th>Post</th>
+                <th>category</th>
                 <th></th>
               </tr>
             </thead>
@@ -117,9 +116,9 @@ const Crud = () => {
               {dataList[0] ? (
                 dataList.map((el) => (
                   <tr key={el._id}>
-                    <td>{el.name}</td>
-                    <td>{el.email}</td>
-                    <td>{el.mobile}</td>
+                    <td>{el.title}</td>
+                    <td>{el.post}</td>
+                    <td>{el.category}</td>
                     <td>
                       <button
                         className="btn"
