@@ -20,6 +20,7 @@ const CreateNote = () => {
         })
             .then((res) => res.json())
             .then((res) => console.log(res))
+             alert("note created succesfully")
             .catch((err) => console.log(err.message));
     };
 
