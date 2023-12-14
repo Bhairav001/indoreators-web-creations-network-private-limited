@@ -37,7 +37,7 @@ const Crud = () => {
   }
 
   const getFetchData = async () => {
-    const data = await axios.get('http://localhost:8080/notes');
+    const data = await axios.get('http://localhost:8080/notes/');
     if (data.data.success) {
       setDataList(data.data.data);
     }
